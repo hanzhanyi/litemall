@@ -51,24 +51,24 @@ export default new Router({
 })
 
 export const asyncRouterMap = [
-  {
-    path: '/user',
-    component: Layout,
-    redirect: 'noredirect',
-    name: 'userManage',
-    meta: {
-      title: '用户管理',
-      icon: 'chart'
-    },
-    children: [
-      { path: 'user', component: _import('user/user'), name: 'user', meta: { title: '会员管理', noCache: true }},
-      { path: 'address', component: _import('user/address'), name: 'address', meta: { title: '收货地址', noCache: true }},
-      { path: 'collect', component: _import('user/collect'), name: 'collect', meta: { title: '会员收藏', noCache: true }},
-      { path: 'footprint', component: _import('user/footprint'), name: 'footprint', meta: { title: '会员足迹', noCache: true }},
-      { path: 'history', component: _import('user/history'), name: 'history', meta: { title: '搜索历史', noCache: true }},
-      { path: 'feedback', component: _import('user/feedback'), name: 'feedback', meta: { title: '意见反馈', noCache: true }}
-    ]
-  },
+  // {
+  //   path: '/user',
+  //   component: Layout,
+  //   redirect: 'noredirect',
+  //   name: 'userManage',
+  //   meta: {
+  //     title: '用户管理',
+  //     icon: 'chart'
+  //   },
+  //   children: [
+  //     { path: 'user', component: _import('user/user'), name: 'user', meta: { title: '会员管理', noCache: true }},
+  //     { path: 'address', component: _import('user/address'), name: 'address', meta: { title: '收货地址', noCache: true }},
+  //     { path: 'collect', component: _import('user/collect'), name: 'collect', meta: { title: '会员收藏', noCache: true }},
+  //     { path: 'footprint', component: _import('user/footprint'), name: 'footprint', meta: { title: '会员足迹', noCache: true }},
+  //     { path: 'history', component: _import('user/history'), name: 'history', meta: { title: '搜索历史', noCache: true }},
+  //     { path: 'feedback', component: _import('user/feedback'), name: 'feedback', meta: { title: '意见反馈', noCache: true }}
+  //   ]
+  // },
 
   {
     path: '/mall',
@@ -83,9 +83,9 @@ export const asyncRouterMap = [
       { path: 'region', component: _import('mall/region'), name: 'region', meta: { title: '行政区域', noCache: true }},
       { path: 'brand', component: _import('mall/brand'), name: 'brand', meta: { title: '品牌制造商', noCache: true }},
       { path: 'category', component: _import('mall/category'), name: 'category', meta: { title: '商品类目', noCache: true }},
-      { path: 'order', component: _import('mall/order'), name: 'order', meta: { title: '订单管理', noCache: true }},
-      { path: 'issue', component: _import('mall/issue'), name: 'issue', meta: { title: '通用问题', noCache: true }},
-      { path: 'keyword', component: _import('mall/keyword'), name: 'keyword', meta: { title: '关键词', noCache: true }}
+      // { path: 'order', component: _import('mall/order'), name: 'order', meta: { title: '订单管理', noCache: true }},
+      // { path: 'keyword', component: _import('mall/keyword'), name: 'keyword', meta: { title: '关键词', noCache: true }},
+      { path: 'issue', component: _import('mall/issue'), name: 'issue', meta: { title: '通用问题', noCache: true }}
     ]
   },
 
@@ -101,65 +101,65 @@ export const asyncRouterMap = [
     children: [
       { path: 'list', component: _import('goods/list'), name: 'goodsList', meta: { title: '商品列表', noCache: true }},
       { path: 'create', component: _import('goods/create'), name: 'goodsCreate', meta: { title: '商品上架', noCache: true }},
-      { path: 'edit', component: _import('goods/edit'), name: 'goodsEdit', meta: { title: '商品编辑', noCache: true }, hidden: true },
-      { path: 'comment', component: _import('goods/comment'), name: 'goodsComment', meta: { title: '商品评论', noCache: true }}
+      // { path: 'comment', component: _import('goods/comment'), name: 'goodsComment', meta: { title: '商品评论', noCache: true }},
+      { path: 'edit', component: _import('goods/edit'), name: 'goodsEdit', meta: { title: '商品编辑', noCache: true }, hidden: true }
     ]
   },
-  {
-    path: '/promotion',
-    component: Layout,
-    redirect: 'noredirect',
-    name: 'promotionManage',
-    meta: {
-      title: '推广管理',
-      icon: 'chart'
-    },
-    children: [
-      { path: 'ad', component: _import('promotion/ad'), name: 'ad', meta: { title: '广告列表', noCache: true }},
-      { path: 'topic', component: _import('promotion/topic'), name: 'topic', meta: { title: '专题管理', noCache: true }},
-      { path: 'groupon-rule', component: _import('promotion/grouponRule'), name: 'grouponRule', meta: { title: '团购规则', noCache: true }},
-      { path: 'groupon-activity', component: _import('promotion/grouponActivity'), name: 'grouponActivity', meta: { title: '团购活动', noCache: true }}
-    ]
-  },
+  // {
+  //   path: '/promotion',
+  //   component: Layout,
+  //   redirect: 'noredirect',
+  //   name: 'promotionManage',
+  //   meta: {
+  //     title: '推广管理',
+  //     icon: 'chart'
+  //   },
+  //   children: [
+  //     { path: 'ad', component: _import('promotion/ad'), name: 'ad', meta: { title: '广告列表', noCache: true }},
+  //     { path: 'topic', component: _import('promotion/topic'), name: 'topic', meta: { title: '专题管理', noCache: true }},
+  //     { path: 'groupon-rule', component: _import('promotion/grouponRule'), name: 'grouponRule', meta: { title: '团购规则', noCache: true }},
+  //     { path: 'groupon-activity', component: _import('promotion/grouponActivity'), name: 'grouponActivity', meta: { title: '团购活动', noCache: true }}
+  //   ]
+  // },
 
-  {
-    path: '/sys',
-    component: Layout,
-    redirect: 'noredirect',
-    name: 'sysManage',
-    meta: {
-      title: '系统管理',
-      icon: 'chart'
-    },
-    children: [
-      { path: 'admin', component: _import('sys/admin'), name: 'admin', meta: { title: '管理员', noCache: true }},
-      { path: 'os', component: _import('sys/os'), name: 'os', meta: { title: '对象存储', noCache: true }}
-    ]
-  },
+  // {
+  //   path: '/sys',
+  //   component: Layout,
+  //   redirect: 'noredirect',
+  //   name: 'sysManage',
+  //   meta: {
+  //     title: '系统管理',
+  //     icon: 'chart'
+  //   },
+  //   children: [
+  //     { path: 'admin', component: _import('sys/admin'), name: 'admin', meta: { title: '管理员', noCache: true }},
+  //     { path: 'os', component: _import('sys/os'), name: 'os', meta: { title: '对象存储', noCache: true }}
+  //   ]
+  // },
 
-  {
-    path: '/stat',
-    component: Layout,
-    redirect: 'noredirect',
-    name: 'statManage',
-    meta: {
-      title: '统计',
-      icon: 'chart'
-    },
-    children: [
-      { path: 'user', component: _import('stat/user'), name: 'statUser', meta: { title: '用户统计', noCache: true }},
-      { path: 'order', component: _import('stat/order'), name: 'statOrder', meta: { title: '订单统计', noCache: true }},
-      { path: 'goods', component: _import('stat/goods'), name: 'statGoods', meta: { title: '商品统计', noCache: true }}
-    ]
-  },
-  {
-    path: '/profile',
-    component: Layout,
-    redirect: 'noredirect',
-    children: [
-      { path: 'password', component: _import('profile/password'), name: 'password', meta: { title: '修改密码', noCache: true }}
-    ],
-    hidden: true
-  },
+  // {
+  //   path: '/stat',
+  //   component: Layout,
+  //   redirect: 'noredirect',
+  //   name: 'statManage',
+  //   meta: {
+  //     title: '统计',
+  //     icon: 'chart'
+  //   },
+    // children: [
+    //   { path: 'user', component: _import('stat/user'), name: 'statUser', meta: { title: '用户统计', noCache: true }},
+    //   { path: 'order', component: _import('stat/order'), name: 'statOrder', meta: { title: '订单统计', noCache: true }},
+    //   { path: 'goods', component: _import('stat/goods'), name: 'statGoods', meta: { title: '商品统计', noCache: true }}
+    // ]
+  // },
+  // {
+  //   path: '/profile',
+  //   component: Layout,
+  //   redirect: 'noredirect',
+  //   children: [
+  //     { path: 'password', component: _import('profile/password'), name: 'password', meta: { title: '修改密码', noCache: true }}
+  //   ],
+  //   hidden: true
+  // },
   { path: '*', redirect: '/404', hidden: true }
 ]
