@@ -42,7 +42,7 @@ rm(path.join(config.build.assetsRoot, config.build.assetsSubDirectory), err => {
           directory: './dist',
           file: '/index.html'
       });
-      console.log('> Listening at ' +  'http://localhost:9526' + '\n')
+      console.log('> Listening at ' +  'http://39.98.44.255:9526' + '\n')
     }
   })
 })
